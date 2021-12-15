@@ -23,6 +23,7 @@
 // You should have received a copy of the MIT License
 // along with Vulkan. If not, see <https://opensource.org/licenses/MIT>.
 
+//imports C Library functions
 #include <stdlib.h>
 #include <stdio.h>
 #include <ctype.h>
@@ -31,6 +32,7 @@
 #include <string.h>
 #include <assert.h>
 
+//imports functions from other files in MoreraCoin/src/common
 #include "argparse.h"
 #include "util.h"
 
