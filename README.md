@@ -2,9 +2,11 @@
 
 A fork of the Vulkan blockchain, meant as a joke for a high school project.
 
+tengo la foootoo de danii moreeeraa
+
 # Work in progress
 
-Developments are extremely slow, do not take this seriously.
+Developments are extremely slow.
 
 
 # License
