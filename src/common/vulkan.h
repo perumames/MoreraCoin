@@ -23,13 +23,18 @@
 // You should have received a copy of the MIT License
 // along with Vulkan. If not, see <https://opensource.org/licenses/MIT>.
 
+// ignores all imports of vulkan.h after being imported once
 #pragma once
 
+// imports functions from the C standard library
+// assert.h imports #define
 #include <assert.h>
 #include <stdlib.h>
 #include <stdint.h>
 
+// allows the sue of C code to be used in C++
 #ifdef __cplusplus
+// creates two macros: one that tells the compiler code be written in C and another that tells the compiler there will no longer be code written in C
 #define VULKAN_BEGIN_DECL extern "C" {
 #define VULKAN_END_DECL	}
 #else
@@ -37,6 +42,7 @@
 #define VULKAN_END_DECL	/* empty */
 #endif
 
+// creates a macro that exports symbols to DLL and shows compilation when using a GNU/Linux operating system
 #ifndef VULKAN_API
 #if defined(_WIN32)
 #ifdef VULKAN_BUILD
@@ -51,12 +57,15 @@
 #endif
 #endif
 
+// defines maximum values
 #ifndef MAX
 #define MAX(x, y) (((x) > (y)) ? (x) : (y))
 #endif
 
+// defines minimum values
 #ifndef MIN
 #define MIN(x, y) (((x) < (y)) ? (x) : (y))
 #endif
 
+// creates a macro that terminates the process if the condition and message are both untrue
 #define ASSERT_WITH_MESS(condition, message) { assert(condition && message); }
